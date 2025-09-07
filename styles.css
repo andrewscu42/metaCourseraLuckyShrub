@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #4a6741;      /* Olive Green */
+    --primary-color: #f0f0f0;      /* Off White*/
     --secondary-color: #81a881;;     /* Muted green */
-    --accent-color:#a11e14;        /* Warm red */
+    --accent-color:#2e6540;        /* Dark Leaf Green */
     --text-color: #4a4a4a;         /* Charcoal */
     --font-family: 'Poppins', Inter, sans-serif;
 }
@@ -129,6 +129,136 @@ footer div {
 
 .second-row article img {
     width: 100%;
+}
+
+body {
+    padding: 5px;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    font-size: 1rem;
+}
+
+header img {
+    max-width: 120px;
+    max-height: 150px;
+}
+
+
+nav ul {
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer {
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.second-row {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.second-row article {
+    flex: none;
+}
+
+.first-row img {
+    max-height: 300px;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    header img {
+        max-width: 150px;
+        max-height: 200px;
+    }
+    
+    /* Tablet: Horizontal navigation */
+    nav ul {
+        flex-direction: row;
+    }
+    
+    /* Tablet: Horizontal footer */
+    footer {
+        flex-direction: row;
+    }
+    
+    /* Tablet: Keep columns stacked for now */
+    .second-row {
+        flex-direction: column;
+    }
+    
+    .first-row img {
+        max-height: 400px;
+    }
+}
+
+/* Desktop and up (1024px+) */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+    
+    header img {
+        max-width: 200px;
+        max-height: 250px;
+    }
+    
+    /* Desktop: Three columns side by side */
+    .second-row {
+        flex-direction: row;
+    }
+    
+    .second-row article {
+        flex: 1;
+    }
+    
+    .first-row img {
+        max-height: 450px;
+    }
+}
+
+/* Large screens - prevent content from getting too wide */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 
