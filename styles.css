@@ -1,7 +1,15 @@
+
+
 body {
     margin: 0;
     padding: 10px;
     box-sizing: border-box;
+}
+
+header img {
+    max-width: 200px;
+    height: auto;
+    display: block;
 }
 
 h1 {
