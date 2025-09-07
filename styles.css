@@ -14,7 +14,7 @@
 }
 
 html {
-    background-color: var(--primary-color);
+    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
 }
 
 /* Body must be a grid container with a header, nav, main, and footer */
@@ -54,7 +54,7 @@ header img {
 
 h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 48px;
     color: var(--accent-color);
 }
 
@@ -82,7 +82,7 @@ nav {
 nav ul {
     display: flex;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     padding: 10px 20px;
     margin: 0;
@@ -99,7 +99,7 @@ nav ul li a {
     font-weight: bold;
     font-family: var(--font-family);
     font-size: 1.5rem;
-    padding: 8px 12px;
+    padding: 8px 6px;
     display: block;
 }
 
@@ -110,18 +110,34 @@ main {
 
 footer {
     grid-area: footer;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "logo . email";
+    align-items: center;
     padding: 10px;
     margin: 0;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
-footer div {
-    flex: 2;
-    text-align: center;
+footer div:first-child {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
     padding: 10px;
+}
+
+footer div:last-child {
+    grid-area: email;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer img {
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
+    height: auto;
 }
 
 /* Container must be a flex container with a column layout */
@@ -151,6 +167,7 @@ footer div {
   
 }
 
+
 /* Second row must have three articles with images */
 .second-row {
     display: flex;
@@ -165,6 +182,11 @@ footer div {
 
 .second-row article img {
     width: 100%;
+    
+}
+
+.second-row article:hover {
+    transform: scale(1.05);
 }
 
 /* Mobile-first base styles are already set above. 
