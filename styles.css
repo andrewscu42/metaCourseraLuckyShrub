@@ -7,7 +7,7 @@
     --border-color: #4a4a4a;
 }
 
-
+/* Bordered must be a border radius of 3px and a border of 1px solid var(--border-color) */
 .bordered {
     border-radius: 3px;
     border: 1px solid var(--border-color);
@@ -17,6 +17,7 @@ html {
     background-color: var(--primary-color);
 }
 
+/* Body must be a grid container with a header, nav, main, and footer */
 body {
     margin: 0;
     padding: 0;
@@ -33,6 +34,7 @@ body {
     gap: 0;
 }
 
+/* Header must be a grid area with a logo image */
 header {
     grid-area: header;
     padding: 10px;
@@ -67,7 +69,7 @@ p {
     font-size: 1rem;
     color: var(--text-color);
 }
-
+/* Nav must be a bordered div with a list of links */
 nav {
     grid-area: nav;
     background-color: var(--secondary-color);
@@ -122,7 +124,7 @@ footer div {
     padding: 10px;
 }
 
-
+/* Container must be a flex container with a column layout */
 .container {
     display: flex;
     flex-direction: column;
@@ -132,6 +134,7 @@ footer div {
     box-sizing: border-box;
 }
 
+/* First row must have one hre image*/
 .first-row {
     margin-bottom: 25px;
     width: 100%;
@@ -148,6 +151,7 @@ footer div {
   
 }
 
+/* Second row must have three articles with images */
 .second-row {
     display: flex;
     gap: 10px;
@@ -163,127 +167,84 @@ footer div {
     width: 100%;
 }
 
-/* Base styles for mobile */
-body {
-    padding: 5px;
-}
+/* Mobile-first base styles are already set above. 
+   Use min-width breakpoints to progressively enhance for larger screens. */
 
-h1 {
-    font-size: 1.5rem;
-}
-
-h2 {
-    font-size: 1.2rem;
-}
-
-nav ul li a {
-    font-size: 1rem;
-}
-
-header img {
-    max-width: 120px;
-    max-height: 150px;
-}
-
-nav ul {
-    flex-direction: column;
-    gap: 10px;
-}
-
-footer {
-    flex-direction: column;
-    gap: 10px;
-}
-
-.second-row {
-    flex-direction: column;
-    gap: 10px;
-}
-
-.second-row article {
-    flex: none;
-}
-
-.first-row img {
-    max-height: 300px;
-}
-
-
-@media (min-width: 768px) {
-    
+/* Tablet: 600px and up */
+@media (min-width: 600px) {
     h1 {
         font-size: 2rem;
     }
-    
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-    
     nav ul li a {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
-    
     header img {
-        max-width: 150px;
-        max-height: 200px;
+        max-width: 140px;
+        max-height: 180px;
     }
-    
+    .first-row img {
+        max-height: 350px;
+    }
+}
+
+/* Small desktop: 900px and up */
+@media (min-width: 900px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    nav ul li a {
+        font-size: 1.3rem;
+    }
+    header img {
+        max-width: 180px;
+        max-height: 220px;
+    }
     nav ul {
         flex-direction: row;
+        gap: 20px;
     }
-    
     footer {
         flex-direction: row;
+        gap: 20px;
     }
-    
     .second-row {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 20px;
     }
-    
+    .second-row article {
+        flex: 1;
+    }
     .first-row img {
         max-height: 400px;
     }
 }
 
-/* Desktop and up (1024px+) */
-@media (min-width: 1024px) {
+/* Large desktop: 1200px and up */
+@media (min-width: 1200px) {
     h1 {
         font-size: 3rem;
     }
-    
     h2 {
         font-size: 2.5rem;
     }
-    
     nav ul li a {
         font-size: 1.5rem;
     }
-    
     header img {
         max-width: 200px;
         max-height: 250px;
     }
-    
-    /* Desktop: Three columns side by side */
-    .second-row {
-        flex-direction: row;
-    }
-    
-    .second-row article {
-        flex: 1;
-    }
-    
-    .first-row img {
-        max-height: 450px;
-    }
-}
-
-/* Large screens - prevent content from getting too wide */
-@media (min-width: 1200px) {
     .container {
         max-width: 1200px;
         margin: 0 auto;
     }
+    .first-row img {
+        max-height: 450px;
+    }
 }
-
-
