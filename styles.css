@@ -1,34 +1,87 @@
-/* Container for the entire layout */
+body {
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+}  
+
+nav ul {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+main {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+footer div {
+    flex: 2;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
-/* First row - single column (full width) */
 .first-row {
-    display: flex;
     background-color: #f0f0f0;
     padding: 10px;
 }
 
 .first-row img {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-/* Second row - three equal columns */
 .second-row {
     display: flex;
     gap: 10px;
 }
 
-.second-row section {
-    flex: 1; /* Each section takes equal space */
+.second-row article {
+    flex: 1;
     background-color: #f0f0f0;
     padding: 10px;
 }
 
-.second-row section img {
+.second-row article img {
     width: 100%;
 }
+
+
